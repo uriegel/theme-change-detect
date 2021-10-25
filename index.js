@@ -11,13 +11,13 @@ if (process.platform == "linux") {
             value: "SystemUsesLightTheme",
             type: "number"
         }, n => callback(({
-            isDark: n != 0
+            isDark: n != 1
         })))
     }
 
     exports.getTheme = function () {
         return {
-            isDark: addon.getDWord(eventSource, 1) == 1
+            isDark: addon.getDWord(eventSource, 1) != 1
         }
     }
     exports.unregister = function () { addon.unregister(eventSource) }
