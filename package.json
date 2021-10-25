@@ -4,7 +4,7 @@
   "description": "Dark theme/light theme detection for windows and Linux (Gtk-Theme)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --nolazy --inspect-brk=9229 dev/test.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/uriegel/theme-change-detect/issues"
   },
-  "homepage": "https://github.com/uriegel/theme-change-detect#readme"
+  "homepage": "https://github.com/uriegel/theme-change-detect#readme",
+  "optionalDependencies": {
+    "registry-changes-detector": "^3.0.0",
+    "node-gsettings-wrapper": "^0.5.0"
+  },
+  "types": "theme-change-detect.d.ts"
 }
