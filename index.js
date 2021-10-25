@@ -10,10 +10,16 @@ if (process.platform == "linux") {
             key: "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
             value: "SystemUsesLightTheme",
             type: "number"
-        }, n => callback(n != 0))
+        }, n => callback(({
+            isDark: n != 0
+        })))
     }
 
-    exports.isLightMode = function () { return addon.getDWord(eventSource, 1) == 1 }
+    exports.getTheme = function () {
+        return {
+            isDark: addon.getDWord(eventSource, 1) == 1
+        }
+    }
     exports.unregister = function () { addon.unregister(eventSource) }
 
     var eventSource
