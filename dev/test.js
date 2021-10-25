@@ -5,3 +5,6 @@ themeChangeDetect.register(theme => {
     })
 const theme = themeChangeDetect.getTheme()
 console.log(theme)
+
+
+setTimeout(() => themeChangeDetect.unregister(), 30000)
