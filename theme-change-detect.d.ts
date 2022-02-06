@@ -1,9 +1,8 @@
-interface Theme {
+export interface Theme {
     isDark: Boolean,
-    name: String?
+    name: string | undefined
 }
 
-declare module 'theme-change-detect.d.ts' {
-    function getTheme(): Theme
-    function register(callback: (theme: Theme)=>void): void
-}
+export function getTheme(): Theme
+export function register(callback: (theme: Theme)=>void): void
+

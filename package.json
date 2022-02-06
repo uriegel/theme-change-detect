@@ -1,6 +1,6 @@
 {
   "name": "theme-change-detect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dark theme/light theme detection for windows and Linux (Gtk-Theme)",
   "main": "index.js",
   "scripts": {
